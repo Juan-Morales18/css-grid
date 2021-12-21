@@ -55,6 +55,30 @@ img {
 .item {
     padding: 1rem;
     font-size: 1.25rem;
-    background-color: #666;
-    border: medium solid #999;
+    background-color: rgb(35, 177, 99);
+    border: medium solid rgb(97, 90, 72);
+}
+
+.grid-explicit {
+    display: grid;
+    /*Grid de 3cx3r*/
+    grid-template-rows: 2rem 20vh 30%;
+    grid-template-columns: 50% 100px 1fr;
+    /*Grid de 5cx4r*/
+    grid-template-columns: repeat(5, 20%);
+    /*repeat(numero de elementos, tamanio)*/
+    grid-template-rows: repeat(4, 25%);
+    /*grid-template-rows: repeat(4, auto);*/
+    grid-template-columns: repeat(5, 1fr);
+    /*Similar repeat(4, auto)*/
+    grid-template-rows: repeat(4, 1fr);
+    /*Grid de 4cx5r*/
+    grid-template-columns: 1fr repeat(2, 10%) 1fr;
+    grid-template-rows: repeat(5, auto);
+    /*grid-row-gap: 1rem;*/
+    /*grid-gap: 100px 0px;*/
+    column-gap: 100px;
+    row-gap: 200px;
+    /*gap: row column*/
+    gap: 1vh 1vw;
 }
