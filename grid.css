@@ -59,6 +59,8 @@ img {
     border: medium solid rgb(97, 90, 72);
 }
 
+/*Grid explicita*/
+
 .grid-explicit {
     display: grid;
     /*Grid de 3cx3r*/
@@ -73,12 +75,42 @@ img {
     /*Similar repeat(4, auto)*/
     grid-template-rows: repeat(4, 1fr);
     /*Grid de 4cx5r*/
-    grid-template-columns: 1fr repeat(2, 10%) 1fr;
+    grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(5, auto);
     /*grid-row-gap: 1rem;*/
     /*grid-gap: 100px 0px;*/
     column-gap: 100px;
     row-gap: 200px;
     /*gap: row column*/
-    gap: 1vh 1vw;
+    gap: 0 0;
+}
+
+/*Posicionamiento con Grid Lines*/
+
+.grid-explicit .item:nth-child(10) {
+    color: rgb(255, 255, 255);
+    grid-row-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-column-end: 3;
+    background-color: rgb(32, 4, 9);
+    grid-row: 3/4;
+    grid-column: 1/5;
+    /*grid area: grid-row-start/grid-column-start/grid-row-end/grid-column-end*/
+    grid-area: 1/1/1/6;
+
+}
+
+.grid-explicit .item:nth-child(1) {
+    color: rgb(255, 255, 255);
+    background-color: rgb(76, 110, 150);
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.grid-explicit .item:nth-child(15) {
+    color: rgb(255, 255, 255);
+    background-color: rgb(21, 38, 56);
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
 }
