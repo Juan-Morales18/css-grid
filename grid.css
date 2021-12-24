@@ -134,6 +134,7 @@ img {
     grid-area: linea-r1/linea-c1/linea-r2/linea-c4;
 }
 
+/*Grid areas*/
 .grid-areas {
     display: grid;
     /*Grid de 2cx3r*/
@@ -167,6 +168,7 @@ img {
     background-color: red;
 }
 
+/*Grid implicita*/
 .grid-implicit {
     display: grid;
     /*display: inline-grid;*/
@@ -174,4 +176,22 @@ img {
     grid-template-columns: repeat(4, 1fr);
     /*Grid de 4cx3r*/
     grid-template-rows: repeat(3, 200px);
+}
+
+/*Flujo de la Grid*/
+.grid-flow {
+    display: grid;
+    /*Grid 5cx4r*/
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-auto-flow: column;
+    grid-auto-flow: column;
+    /*Las grids generadas de manera implicita adquieren un tamanio definido por el espacio disponible*/
+    grid-auto-rows: auto;
+    /*Las grids generadas de manera implicita tienen un tamanio establecido*/
+    grid-auto-rows: 200px;
+    /*El ancho de columnas de las grids generadas de manera implicita adquieren un tamanio definido por el espacio disponible*/
+    grid-auto-columns: auto;
+    /*El ancho de las filas de las grids generadad de manera implicita adquieren un tamanio establecido*/
+    grid-auto-columns: 50px;
 }
