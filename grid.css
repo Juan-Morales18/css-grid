@@ -329,3 +329,18 @@ img {
     align-content: space-around;
     align-content: space-evenly;
 }
+
+/*Tams maximos y minimos de Grid Tracks*/
+.grid-min-max {
+    display: grid;
+    /*Grid de 4cx?r*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(250px, 500px));
+    /*min-content: minimo de contenido de la columna*/
+    grid-template-columns: repeat(4, minmax(min-content, 100px));
+    grid-template-columns: repeat(4, minmax(100px, min-content));
+    grid-template-columns: repeat(4, minmax(100px, max-content));
+    grid-template-columns: repeat(4, minmax(max-content, 100px));
+    grid-template-columns: repeat(4, minmax(min-content, max-content));
+
+}
