@@ -263,3 +263,47 @@ img {
     grid-row: 2/4;*/
     grid-area: 2/2/4/4
 }
+
+/*Orden y alineacion de grid items*/
+.grid-order {
+    display: grid;
+    /*Grid de 3cx2r*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+}
+
+.grid-order .item:nth-child(1) {
+    color: white;
+    order: 1;
+}
+
+.grid-order .item:nth-child(2) {
+    order: 2;
+}
+
+.grid-order .item:nth-child(5) {
+    order: -1;
+}
+
+.grid-align {
+    display: grid;
+    /*Grid de 3cx2r*/
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+    grid-auto-flow: column;
+    /*justify-items: Alinea elementos en x*/
+    justify-items: stretch;
+    justify-items: center;
+    justify-items: end;
+    /*align-items: Alinea elementos en y*/
+    align-items: stretch;
+    align-items: start;
+    align-items: center;
+    align-items: end;
+}
+
+.grid-align .item:nth-child(4) {
+    justify-self: center;
+    align-self: center;
+}
