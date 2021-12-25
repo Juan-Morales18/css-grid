@@ -307,3 +307,25 @@ img {
     justify-self: center;
     align-self: center;
 }
+
+/*Alineacion de Grid Tracks*/
+
+.grid-align-tracks {
+    display: grid;
+    /*Grid de 3cx2r*/
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+    /*justify-content:Alinea los tracks de la grid en x*/
+    justify-content: start;
+    justify-content: end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    /*align-content: Alinea los tracks  de la grid en y*/
+    align-content: start;
+    align-content: center;
+    align-content: end;
+    align-content: space-around;
+    align-content: space-evenly;
+}
